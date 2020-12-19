@@ -15,9 +15,7 @@ using System.Windows.Shapes;
 
 namespace WpfApp2._3
 {
-    /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
-    /// </summary>
+
     public partial class MainWindow : Window
     {
         public MainWindow()
@@ -27,50 +25,61 @@ namespace WpfApp2._3
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            int a = int.Parse(count1.Text);
-            int b = int.Parse(count2.Text);
-            int c = int.Parse(count3.Text);
-            int count = 0;
-            if (a > 3 || b > 3 || c > 3)
+            //Высокий уровень
+            try
             {
-                result.Text = "Некорректное значение";
-                goto dyrak;
+                int a = int.Parse(count1.Text);
+                int b = int.Parse(count2.Text);
+                int c = int.Parse(count3.Text);
+                int count = 0;
+                if (a > 3 || b > 3 || c > 3)
+                {
+                    result.Text = "Некорректное значение";
+                    goto oshibka;
+                }
+                switch (a)
+                {
+                    case 1:
+                        count += 0;
+                        break;
+                    case 2:
+                        count += 2;
+                        break;
+                    case 3:
+                        count += 0;
+                        break;
+                }
+                switch (b)
+                {
+                    case 1:
+                        count += 2;
+                        break;
+                    case 2:
+                        count += 0;
+                        break;
+                    case 3:
+                        count += 0;
+                        break;
+                }
+                switch (c)
+                {
+                    case 1:
+                        count += 0;
+                        break;
+                    case 2:
+                        count += 0;
+                        break;
+                    case 3:
+                        count += 1;
+                        break;
+                }
+                result.Text = $"Результат теста {count}/5";
+            oshibka: return;
             }
-            switch (a)
+            catch(Exception error)
             {
-                case 1: count += 0;
-                    break;
-                case 2: count += 2;
-                    break;
-                case 3: count += 0;
-                    break;
+                MessageBox.Show(error.Message);
             }
-            switch (b)
-            {
-                case 1:
-                    count += 2;
-                    break;
-                case 2:
-                    count += 0;
-                    break;
-                case 3:
-                    count += 0;
-                    break;
-            }
-            switch (c)
-            {
-                case 1:
-                    count += 0;
-                    break;
-                case 2:
-                    count += 0;
-                    break;
-                case 3:
-                    count += 1;
-                    break;
-            }
-            result.Text = $"Результат теста {count}/5";
-        dyrak:  return;
         }
     }
 }

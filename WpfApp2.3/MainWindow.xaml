@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp2._3"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Оператор выбора" Height="450" Width="800">
     <Grid>
         <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="10,10,0,0" Height="35" Width="553"><Run Text="Система программного обеспечени"/><Run Text="я, что управляет работой всех структурных узлов компьютера, называется:"/></TextBlock>
         <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Совокупность данных, что размещены на диске и имеют общее имя и назначение - это:" VerticalAlignment="Top" Margin="10,135,0,0" Height="23" Width="503"/>
@@ -21,7 +21,7 @@
         <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="10,332,0,0"><Run Text="3"/><Run Text=". Ромб"/></TextBlock>
         <TextBox x:Name="count1" HorizontalAlignment="Left" Height="23" Margin="10,98,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="count2" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="10,211,0,0"/>
-        <TextBox x:Name="count3" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="10,353,0,0" TextChanged="TextBox_TextChanged"/>
+        <TextBox x:Name="count3" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="10,353,0,0"/>
         <Button Content="OK" HorizontalAlignment="Left" VerticalAlignment="Top" Width="50" Margin="653,47,0,0" Height="50" Click="Button_Click"/>
         <TextBlock x:Name="result" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="618,122,0,0" Height="52" Width="116"/>
     </Grid>
